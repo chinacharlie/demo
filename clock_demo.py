@@ -20,7 +20,7 @@ def factorial(n):
 
 def main():
     print('*' * 40, 'Calling factorial(10)')
-    print('6! =', factorial(10))
+    print('10! =', factorial(10))
  
 if __name__ == '__main__':
     main()
