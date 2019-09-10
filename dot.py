@@ -5,17 +5,19 @@ def dot(a, b):
     c = np.zeros((a.shape[0], b.shape[1]))
     for i in range (a.shape[0]):
         for j in range (b.shape[1]):
-            for k in range(a.shape[1]):  #这里本身有bug，假设a.shape[1] == b.shape[0]
-                c[i][j] += (a[i, k] * b[k, j])
+            v1 = a[i,:]
+            v2 = b[:,j]
+            for k in range(v1.shape[0]):  #这里本身有bug，假设a.shape[1] == b.shape[0]
+                c[i][j] += v1[k] * v2[k]
 
     return c
 
+
 #第一种情况
-m1 = np.zeros((2, 2))
-m2 = np.zeros((3, 3))
+m1 = np.arange(1,5).reshape(2,2)
+m2 = np.arange(0,9).reshape(3,3)
 m = dot(m1, m2)
+
 #第二种情况
-m1 = np.zeros((2, 3))
-m2 = np.zeros((2, 3))
-m = dot(m1, m2)
+m = dot(m2, m1)
 
