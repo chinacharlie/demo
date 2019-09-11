@@ -12,6 +12,9 @@ def dot(a, b):
 
     return c
 
+m1 = np.arange(0,0).reshape(0,0)
+m2 = np.arange(0,0).reshape(0,0)
+m = dot(m1, m2)
 
 #第一种情况
 m1 = np.arange(1,5).reshape(2,2)
@@ -21,3 +24,7 @@ m = dot(m1, m2)
 #第二种情况
 m = dot(m2, m1)
 
+#第三种情况
+m1 = np.arange(0,0).reshape(0,0)
+m2 = np.arange(0,0).reshape(0,0)
+m = dot(m1, m2)

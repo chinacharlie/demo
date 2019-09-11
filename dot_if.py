@@ -1,6 +1,6 @@
 import numpy as np
 
-def ParameterError(Exception):
+class ParameterError(Exception):
     pass
 
 def dot(a, b): 
@@ -23,10 +23,12 @@ def dot(a, b):
                 c[i][j] += v1[k] * v2[k]
     return c
 
-#第一种情况
-m1 = np.arange(1,5).reshape(2,2)
-m2 = np.arange(0,9).reshape(3,3)
-#m = dot(m1, m2)
 
-#第二种情况
-m = dot(m2, m1)
+if __name__ == '__maint__':
+    #第一种情况
+    m1 = np.arange(1,5).reshape(2,2)
+    m2 = np.arange(0,9).reshape(3,3)
+    #m = dot(m1, m2)
+
+    #第二种情况
+    m = dot(m2, m1)
