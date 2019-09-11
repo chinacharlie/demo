@@ -16,6 +16,5 @@ class TestMaxNumber(unittest.TestCase):
     def test2(self):
         self.assertEqual(max_number((-11, -1)), -1)
 
-
-TestMaxNumber().test1()
-TestMaxNumber().test2()
+if __name__ == "__main__":
+    unittest.main()

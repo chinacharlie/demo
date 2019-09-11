@@ -20,6 +20,6 @@ class TestCoverage(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(multiply(-11, -1), 11)
 
+if __name__ == '__main__':
+    unittest.main()
 
-TestCoverage().test_add()
-TestCoverage().test_multiply()

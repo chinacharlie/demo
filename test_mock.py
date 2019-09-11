@@ -41,6 +41,5 @@ class TestPython(unittest.TestCase):
         self.assertRaises(myException, is_python_site)
 
 
-t = TestPython()
-t.test_python()
-t.test_404()
+if __name__ == '__main__':
+    unittest.main()
